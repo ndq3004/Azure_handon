@@ -1,0 +1,29 @@
+<style>
+    :host {
+        background: #a15e5e;
+    }
+
+    h1 {
+        color: blue;
+    }
+
+    .setting-bg {
+        background: #a15e5e;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+</style>
+<div class="setting-bg">
+    <p>settings works!</p>
+    <p *ngIf="id">{{id}}</p>
+    
+    <!-- import component directly -->
+    <h1>Below is messsages component imported directly</h1>
+    <app-messages></app-messages>
+    
+    <h1>Below is messsages component imported by property</h1>
+    <main>
+        <ng-container *ngIf="selectedComponent" [ngComponentOutlet]="selectedComponent"></ng-container>
+    </main>
+</div>

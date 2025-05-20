@@ -1,0 +1,6 @@
+<p>messages works!</p>
+<input #refInput type="text" [(ngModel)]="inputMessage" placeholder="Enter message" />
+<button (click)="pushMessage(refInput)">Push mesage</button>
+<div [contentEditable]="isEditable">sdfsfd</div>
+
+<p *ngFor="let item of messages">{{item}}</p>
